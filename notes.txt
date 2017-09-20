@@ -1,5 +1,6 @@
-docker pull hwuethrich/bamboo-server
-docker run -p 8085:8085 -p 54663:54663 --rm -e BAMBOO_VERSION=6.1.1 -d --name=bamboo-server hwuethrich/bamboo-server
+Usage
+-----
+docker run -d -p 8085:8085 -p 54663:54663 -v ~/bamboo/home/bamboo:/home/bamboo --name=bamboo-server bamboo-server
 docker logs -f bamboo-server
 open http://localhost:8085
 docker rm -f bamboo-server
